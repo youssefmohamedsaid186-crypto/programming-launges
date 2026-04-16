@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fa-solid fa-code"></i> ProgLangs</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-view="home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="section-title">Languages</li>
+                <li><a href="#" data-view="lang-python"><i class="fa-brands fa-python"></i> Python</a></li>
+                <li><a href="#" data-view="lang-javascript"><i class="fa-brands fa-js"></i> JavaScript</a></li>
+                <li><a href="#" data-view="lang-cpp"><i class="fa-solid fa-c"></i> C++</a></li>
+                <li><a href="#" data-view="lang-java"><i class="fa-brands fa-java"></i> Java</a></li>
+                <li class="section-title">Resources</li>
+                <li><a href="#" data-view="references"><i class="fa-solid fa-book"></i> References</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" data-view="login" class="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="main-content">
+            <!-- Home View -->
+            <section id="view-home" class="view active">
+                <div class="hero">
+                    <h1>Welcome to <span class="highlight">Programming Languages</span></h1>
+                    <p>Start your coding journey here. Select a language from the sidebar to learn more.</p>
+                </div>
+                <div class="cards-container">
+                    <div class="card" onclick="document.querySelector('[data-view=\'lang-python\']').click()">
+                        <i class="fa-brands fa-python card-icon"></i>
+                        <h3>Python</h3>
+                        <p>Easy to learn, powerful, and versatile.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-view=\'lang-javascript\']').click()">
+                        <i class="fa-brands fa-js card-icon"></i>
+                        <h3>JavaScript</h3>
+                        <p>The language of the web.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Python View -->
+            <section id="view-lang-python" class="view">
+                <div class="content-header">
+                    <h1>Python</h1>
+                    <p>A high-level, general-purpose programming language.</p>
+                </div>
+                <div class="content-body">
+                    <h2>Why learn Python?</h2>
+                    <p>Python's design philosophy emphasizes code readability with its use of significant indentation. It's used in web development, data science, AI, and more.</p>
+                    <div class="code-block">
+                        <pre><code>print("Hello, World!")</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JavaScript View -->
+            <section id="view-lang-javascript" class="view">
+                <div class="content-header">
+                    <h1>JavaScript</h1>
+                    <p>The programming language of the Web.</p>
+                </div>
+                <div class="content-body">
+                    <h2>Why learn JavaScript?</h2>
+                    <p>JavaScript is one of the 3 languages all web developers must learn: HTML to define the content of web pages, CSS to specify the layout of web pages, and JavaScript to program the behavior of web pages.</p>
+                    <div class="code-block">
+                        <pre><code>console.log("Hello, World!");</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- C++ View -->
+            <section id="view-lang-cpp" class="view">
+                <div class="content-header">
+                    <h1>C++</h1>
+                    <p>A cross-platform language that can be used to create high-performance applications.</p>
+                </div>
+                <div class="content-body">
+                    <h2>Why learn C++?</h2>
+                    <p>C++ gives programmers a high level of control over system resources and memory. It works well for game development, performance-critical applications, and system programming.</p>
+                    <div class="code-block">
+                        <pre><code>#include &lt;iostream&gt;
+int main() {
+    std::cout << "Hello World!";
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Java View -->
+            <section id="view-lang-java" class="view">
+                <div class="content-header">
+                    <h1>Java</h1>
+                    <p>Write once, run anywhere.</p>
+                </div>
+                <div class="content-body">
+                    <h2>Why learn Java?</h2>
+                    <p>Java is among the most popular programming languages out there. It is widely used for building enterprise applications, Android apps, and large systems.</p>
+                    <div class="code-block">
+                        <pre><code>class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- References View -->
+            <section id="view-references" class="view">
+                <div class="content-header">
+                    <h1>References & Resources</h1>
+                    <p>Helpful links and books to continue your learning journey.</p>
+                </div>
+                <div class="content-body">
+                    <ul class="resource-list">
+                        <li>
+                            <i class="fa-solid fa-link"></i>
+                            <div>
+                                <h3>MDN Web Docs</h3>
+                                <p>The best place to learn Web technologies like HTML, CSS, and JS.</p>
+                                <a href="https://developer.mozilla.org" target="_blank">Visit MDN</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-book"></i>
+                            <div>
+                                <h3>Python Official Documentation</h3>
+                                <p>Comprehensive guide to the Python language and library.</p>
+                                <a href="https://docs.python.org/3/" target="_blank">Visit Python Docs</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-film"></i>
+                            <div>
+                                <h3>FreeCodeCamp</h3>
+                                <p>Learn to code for free with interactive tutorials and projects.</p>
+                                <a href="https://www.freecodecamp.org/" target="_blank">Visit FreeCodeCamp</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Login View -->
+            <section id="view-login" class="view">
+                <div class="login-container">
+                    <div class="login-box">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to continue your learning journey.</p>
+                        <form id="login-form">
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <button type="submit" class="submit-btn">Login</button>
+                            <div class="form-footer">
+                                <a href="#">Forgot password?</a>
+                                <p>Don't have an account? <a href="#">Sign up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
